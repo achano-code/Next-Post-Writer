@@ -8,3 +8,13 @@ export type SiteConfig = {
     gitLab: string;
   };
 };
+
+export type NavItem = {
+  title: string;
+  href: string;
+  disabled?: boolean;
+};
+
+export type MarketingConfig = {
+  mainNav: NavItem[];
+};

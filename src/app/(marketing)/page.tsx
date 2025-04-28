@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { siteConfig } from "../../../config/site";
 
 const MarketingPage = () => {
   return (
@@ -9,7 +10,7 @@ const MarketingPage = () => {
       <section className="pt-6 pb-8 md:pt-10 md:pb-12 lg:py-32">
         <div className="container mx-auto text-center flex flex-col items-center">
           <Link
-            href={"/"}
+            href={siteConfig.links.X}
             className="bg-muted px-4 py-1.5 rounded-2xl font-medium"
           >
             Xをフォローする
@@ -29,12 +30,12 @@ const MarketingPage = () => {
               はじめる
             </Link>
             <Link
-              href={"/"}
+              href={siteConfig.links.gitLab}
               className={cn(buttonVariants({ size: "lg", variant: "outline" }))}
               target="_blank"
               rel="noreferrer"
             >
-              GitHub
+              GitLab
             </Link>
           </div>
         </div>

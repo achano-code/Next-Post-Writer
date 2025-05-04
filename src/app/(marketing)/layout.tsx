@@ -4,11 +4,12 @@ import React from "react";
 import { cn } from "@/lib/utils";
 import MainNav from "@/components/MainNav";
 import { marketingConfig } from "../../../config/marketing";
+import SiteFooter from "@/components/SiteFooter";
 
 const MarketingLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div>
-      <header className="container mx-auto z-40 bg-background">
+      <header className="container mx-auto z-40 bg-background pl-2 pr-2">
         <div className="h-20 py-6 flex items-center justify-between">
           <MainNav items={marketingConfig.mainNav} />
           <nav>
@@ -25,6 +26,7 @@ const MarketingLayout = ({ children }: { children: React.ReactNode }) => {
         </div>
       </header>
       <main>{children}</main>
+      <SiteFooter />
     </div>
   );
 };
